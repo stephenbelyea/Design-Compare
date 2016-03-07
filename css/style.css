@@ -1,0 +1,50 @@
+html, body, #wrap {
+  height: 100%
+}
+#wrap {
+  background: #ddd;
+  height: 100%;
+}
+#viewport {
+  padding: 1em;
+  overflow: hidden;
+  display: block;
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+}
+.view {
+  display: block;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+/*
+    Set mobile-to-desktop sizes based on 320px
+    mobile width and 1200px width for desktop.
+    Add a center gutter (1.3em) for separation.
+ */
+#mobile {
+  width: calc(26.66% - 0.65em);
+  float: left;
+}
+#desktop {
+  width: calc(73.34% - 0.65em);
+  float: right;
+}
+.view img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+/*
+    Set scale of desktop to crop large left/right
+    gutters from core content grid width.
+ */
+#desktop img {
+  max-width: 136%;
+  margin-left: -18%;
+}
