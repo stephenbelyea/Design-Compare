@@ -4,6 +4,40 @@ html, body, #wrap {
 #wrap {
   background: #ddd;
   height: 100%;
+  position: relative;
+  z-index: 1;
+}
+#settings {
+  position: absolute;
+  z-index: 99;
+  width: 50%;
+  left: calc(25% - 2em);
+  top: -100%;
+  background: black;
+  color: white;
+  padding: 3em 2em 1em;
+}
+#settings[data-settings-open="true"] {
+  top: 0;
+}
+#toggle-settings {
+  background: black;
+  color: white;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: calc(50% - 4.5em);
+}
+#toggle-settings[data-settings-toggle="true"] {
+  background: white;
+  color: black;
 }
 #viewport {
   padding: 1em;
@@ -19,6 +53,7 @@ html, body, #wrap {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;
+  z-index: 2;
 }
 /*
     Set mobile-to-desktop sizes based on 320px
@@ -39,6 +74,7 @@ html, body, #wrap {
   height: auto;
   display: block;
   position: absolute;
+  z-index: 3;
 }
 /*
     Set scale of desktop to crop large left/right
