@@ -10,7 +10,25 @@
   <body>
     <div id="wrap">
       <div id="settings" data-settings-open="false">
-        <p>Settings content...</p>
+        <form action="?" method="get" id="update-settings">
+          <p>
+            <label for="mobile-content-wide">Mobile Content Width (pixels): </label>
+            <input type="number" id="mobile-content-wide" name="mcw" value="320">
+          </p>
+          <p>
+            <label for="mobile-image-wide">Mobile Image Width (pixels): </label>
+            <input type="number" id="mobile-image-wide" name="miw" value="320">
+          </p>
+          <p>
+            <label for="desktop-content-wide">Desktop Content Width (pixels): </label>
+            <input type="number" id="desktop-content-wide" name="dcw" value="1200">
+          </p>
+          <p>
+            <label for="desktop-image-wide">Desktop Image Width (pixels): </label>
+            <input type="number" id="desktop-image-wide" name="diw" value="1700">
+          </p>
+          <p><input type="submit" id="update" value="Update"></p>
+        </form>
       </div>
       <button id="toggle-settings" data-settings-toggle="false">Open Settings</button>
       <div id="viewport">
